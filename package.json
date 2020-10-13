@@ -1,0 +1,45 @@
+{
+  "name": "vue-shopify-draggable",
+  "version": "0.0.1",
+  "description": "Vue component of Shopify draggable.",
+  "main": "lib/vue-shopify-draggable.cjs.js",
+  "scripts": {
+    "build:umd": "webpack --config ./scripts/build/webpack.umd.js",
+    "build:cjs": "webpack --config ./scripts/build/webpack.cjs.js",
+    "dev": "webpack --config ./scripts/build/webpack.dev.js",
+    "lint": "eslint ./src/**/*.js ./scripts/**/*.js",
+    "test": "karma start ./scripts/test/karma.dev.conf.js",
+    "test-ci": "karma start ./scripts/test/karma.ci.conf.js --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjffun/vue-shopify-draggable.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zjffun/vue-shopify-draggable/issues"
+  },
+  "homepage": "https://github.com/zjffun/vue-shopify-draggable#readme",
+  "peerDependencies": {
+    "@shopify/draggable": "^1.0.0-beta.11",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@shopify/draggable": "^1.0.0-beta.11",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jasmine": "^4.1.1",
+    "karma": "^5.2.3",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-webpack": "^4.0.2",
+    "vue": "^2.6.12",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.2.0"
+  }
+}

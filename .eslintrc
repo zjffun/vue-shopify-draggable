@@ -1,0 +1,30 @@
+{
+  "extends": ["airbnb-base"],
+  "env": {
+    "browser": true
+  },
+  "ignorePatterns": ["lib/**"],
+  "rules": {
+    "import/prefer-default-export": 0
+  },
+  "overrides": [
+    {
+      "files": ["scripts/build/*.js"],
+      "rules": {
+        "import/no-extraneous-dependencies": 0
+      }
+    },
+    {
+      "files": ["src/**/tests/**/*.js"],
+      "env": { "jasmine": true },
+      "plugins": ["jasmine"],
+      "extends": ["plugin:jasmine/recommended"],
+      "rules": {
+        "jasmine/prefer-toHaveBeenCalledWith": 0
+      },
+      "globals": {
+        "Vue": true
+      }
+    }
+  ]
+}
