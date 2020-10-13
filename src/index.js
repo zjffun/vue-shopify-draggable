@@ -1,3 +1,4 @@
+/* global PKG_VERSION */
 import Draggable from './draggable';
 import DraggableContainer from './draggable-container';
 import Droppable from './droppable';
@@ -14,7 +15,7 @@ const install = (Vue) => {
 };
 
 export default {
-  verions: process.env.PACKAGE_VERSION,
+  version: PKG_VERSION,
   install,
   Draggable,
   DraggableContainer,

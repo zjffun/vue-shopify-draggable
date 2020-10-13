@@ -10,6 +10,7 @@ import {
 } from '../../../scripts/test/helper';
 import propsTag from '../../tests/props-tag';
 import propsOptions from '../../tests/props-options';
+import eventPlugin from '../../tests/event-plugin';
 
 Vue.use(VueShopifyDraggable);
 
@@ -42,6 +43,8 @@ describe('Draggable', () => {
   });
 
   describe('events', () => {
+    eventPlugin(env);
+
     it('draggable:initialize', () => {
       // can't test
     });

@@ -1,5 +1,5 @@
-- add test of plugin events
-- config Babel
+- [x] add test of plugin events
+- [x] config Babel
 - add docs
 - config GitHub Actions
 

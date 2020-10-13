@@ -12,6 +12,7 @@ export default (env) => {
     expect(options.delay).toBe(100);
     expect(options.draggable).toBe('.draggable-source');
   });
+
   it('should be set provided value', () => {
     vueInstance = new Vue({
       el: env.el,
@@ -32,6 +33,7 @@ export default (env) => {
     expect(options.delay).toBe(100);
     expect(options.draggable).toBe('.draggable-source');
   });
+
   it('should be binding', async () => {
     vueInstance = new Vue({
       el: env.el,
