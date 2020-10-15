@@ -13,8 +13,10 @@ import propsOptions from '../../tests/props-options';
 
 Vue.use(VueShopifyDraggable);
 
-describe('Draggable', () => {
-  const env = {};
+describe('Droppable', () => {
+  const env = {
+    componentTagName: 'vue-droppable',
+  };
 
   let vueInstance;
   let el;

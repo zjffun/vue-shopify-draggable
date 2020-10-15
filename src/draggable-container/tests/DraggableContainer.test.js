@@ -4,7 +4,9 @@ import propsTag from '../../tests/props-tag';
 Vue.use(VueShopifyDraggable);
 
 describe('DraggableContainer', () => {
-  const env = {};
+  const env = {
+    componentTagName: 'vue-draggable-container',
+  };
 
   let vueInstance;
   let el;

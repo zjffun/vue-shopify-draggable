@@ -9,7 +9,8 @@
     "dev": "webpack --config ./scripts/build/webpack.dev.js",
     "lint": "eslint ./src/**/*.js ./scripts/**/*.js",
     "test": "karma start ./scripts/test/karma.dev.conf.js",
-    "test-ci": "karma start ./scripts/test/karma.ci.conf.js --single-run"
+    "test-ci": "karma start ./scripts/test/karma.ci.conf.js --single-run",
+    "doc:toc": "markdown-toc README.md"
   },
   "repository": {
     "type": "git",

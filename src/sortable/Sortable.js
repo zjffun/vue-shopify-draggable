@@ -28,6 +28,9 @@ export default {
     },
   },
   render(createElement) {
+    if (this.tag === '') {
+      return this.$slots.default[0];
+    }
     return createElement(this.tag, this.$slots.default);
   },
 };

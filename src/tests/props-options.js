@@ -1,10 +1,11 @@
 export default (env) => {
   let vueInstance;
+  const { componentTagName } = env;
 
   it('should be set default value when not provided', () => {
     vueInstance = new Vue({
       el: env.el,
-      template: '<vue-draggable ref="draggable"></vue-draggable>',
+      template: `<${componentTagName} ref="draggable"></${componentTagName}>`,
     });
     const { options } = vueInstance.$refs.draggable.draggableInstance;
 
@@ -16,7 +17,7 @@ export default (env) => {
   it('should be set provided value', () => {
     vueInstance = new Vue({
       el: env.el,
-      template: '<vue-draggable :options="options" ref="draggable"></vue-draggable>',
+      template: `<${componentTagName} :options="options" ref="draggable"></${componentTagName}>`,
       data() {
         return {
           options: {
@@ -37,7 +38,7 @@ export default (env) => {
   it('should be binding', async () => {
     vueInstance = new Vue({
       el: env.el,
-      template: '<vue-draggable :options="options" ref="draggable"></vue-draggable>',
+      template: `<${componentTagName} :options="options" ref="draggable"></${componentTagName}>`,
       data() {
         return {
           options: {

@@ -1,10 +1,26 @@
 export default (env) => {
   let vueInstance;
+  const { componentTagName } = env;
+
+  it('should render first slot node when set an empty string', async () => {
+    vueInstance = new Vue({
+      el: env.el,
+      template: `
+        <${componentTagName} tag="" ref="draggable">
+          <div ref="item1">item1</div>
+          <div ref="item2">item2</div>
+        </${componentTagName}>
+      `,
+    });
+    const element = vueInstance.$el;
+
+    expect(element).toBe(vueInstance.$refs.item1);
+  });
 
   it('should use default value when not provided', () => {
     vueInstance = new Vue({
       el: env.el,
-      template: '<vue-draggable ref="draggable"></vue-draggable>',
+      template: `<${componentTagName} ref="draggable"></${componentTagName}>`,
     });
     const element = vueInstance.$el;
 
@@ -14,7 +30,7 @@ export default (env) => {
   it('should user provided value', () => {
     vueInstance = new Vue({
       el: env.el,
-      template: '<vue-draggable tag="ul" ref="draggable"></vue-draggable>',
+      template: `<${componentTagName} tag="ul" ref="draggable"></${componentTagName}>`,
     });
     const element = vueInstance.$el;
 
@@ -24,7 +40,7 @@ export default (env) => {
   it('should be binding', async () => {
     vueInstance = new Vue({
       el: env.el,
-      template: '<vue-draggable :tag="tag" ref="draggable"></vue-draggable>',
+      template: `<${componentTagName} :tag="tag" ref="draggable"></${componentTagName}>`,
       data() {
         return {
           tag: 'ul',

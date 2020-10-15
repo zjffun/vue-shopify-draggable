@@ -7,7 +7,9 @@ import propsOptions from '../../tests/props-options';
 Vue.use(VueShopifyDraggable);
 
 describe('Sortable', () => {
-  const env = {};
+  const env = {
+    componentTagName: 'vue-sortable',
+  };
 
   let vueInstance;
   let el;

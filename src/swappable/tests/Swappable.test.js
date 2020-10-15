@@ -7,7 +7,9 @@ import propsOptions from '../../tests/props-options';
 Vue.use(VueShopifyDraggable);
 
 describe('Swappable', () => {
-  const env = {};
+  const env = {
+    componentTagName: 'vue-swappable',
+  };
 
   let vueInstance;
   let el;

@@ -6,7 +6,8 @@
   "ignorePatterns": ["lib/**"],
   "rules": {
     "import/prefer-default-export": 0,
-    "object-curly-newline": 0
+    "object-curly-newline": 0,
+    "operator-linebreak": 0
   },
   "overrides": [
     {

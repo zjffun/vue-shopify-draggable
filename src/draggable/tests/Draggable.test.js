@@ -15,7 +15,9 @@ import eventPlugin from '../../tests/event-plugin';
 Vue.use(VueShopifyDraggable);
 
 describe('Draggable', () => {
-  const env = {};
+  const env = {
+    componentTagName: 'vue-draggable',
+  };
 
   let vueInstance;
   let el;
