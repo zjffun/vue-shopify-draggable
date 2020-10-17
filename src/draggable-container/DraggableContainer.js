@@ -1,5 +1,5 @@
 const errorMsg =
-  "Can't get draggableInstance, DraggableContainer only be used in Draggable, Droppable, Sortable or Swappable";
+  "Can't get the injected object `draggable`, DraggableContainer only be used in Draggable, Droppable, Sortable or Swappable";
 
 export default {
   name: 'VueDraggableContainer',

@@ -3,7 +3,7 @@ const webpackConfig = require('./webpack.prod.js');
 
 module.exports = merge(webpackConfig, {
   output: {
-    filename: 'vue-shopify-draggable.common.js',
+    filename: 'index.common.js',
     libraryExport: 'default',
     libraryTarget: 'commonjs2',
   },

@@ -5,7 +5,6 @@ export default {
   name: 'VueDraggable',
   mixins: [draggableMixin],
   data() {
-    this.containers = [];
     return {};
   },
   methods: {

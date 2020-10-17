@@ -1,5 +1,5 @@
 import * as Draggable from '@shopify/draggable/lib/draggable';
-import VueShopifyDraggable from '../../../lib/vue-shopify-draggable.umd';
+import VueShopifyDraggable from '../../../lib/index.common';
 import {
   clickMouse,
   drag,
@@ -8,8 +8,8 @@ import {
   releaseMouse,
   requestAnimationFrameDelay,
 } from '../../../scripts/test/helper';
-import propsTag from '../../tests/props-tag';
-import propsOptions from '../../tests/props-options';
+import propTag from '../../tests/prop-tag';
+import propOptions from '../../tests/prop-options';
 import eventPlugin from '../../tests/event-plugin';
 
 Vue.use(VueShopifyDraggable);
@@ -36,11 +36,11 @@ describe('Draggable', () => {
 
   describe('props', () => {
     describe('options', () => {
-      propsOptions(env);
+      propOptions(env);
     });
 
     describe('tag', () => {
-      propsTag(env);
+      propTag(env);
     });
   });
 

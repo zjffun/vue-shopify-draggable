@@ -1,6 +1,5 @@
-import pluginEvents from './plugin-events';
-
 const events = [
+  // draggable events
   'draggable:initialize',
   'draggable:destroy',
   'drag:start',
@@ -12,6 +11,16 @@ const events = [
   'drag:stop',
   'drag:stopped',
   'drag:pressure',
+  // plugin events
+  'mirror:create',
+  'mirror:created',
+  'mirror:attached',
+  'mirror:move',
+  'mirror:destroy',
+  'collidable:in',
+  'collidable:out',
+  'snap:in',
+  'snap:out',
 ];
 
 export default {
@@ -21,6 +30,7 @@ export default {
     };
   },
   data() {
+    this.containers = [];
     this.draggableInstance = null;
     return {};
   },
@@ -38,18 +48,22 @@ export default {
     pluginEvents: {
       type: Array,
       default() {
-        return pluginEvents;
+        return [];
       },
     },
   },
   watch: {
     options() {
-      this.createInstanceBindEvent();
+      this.createInstanceBindEvents();
+    },
+    pluginEvents() {
+      // TODO: optimize
+      this.createInstanceBindEvents();
     },
   },
   methods: {
     createInstance() {},
-    createInstanceBindEvent() {
+    createInstanceBindEvents() {
       this.createInstance();
       events.forEach((eventName) => {
         this.draggableInstance.on(eventName, (event) => {
@@ -64,7 +78,7 @@ export default {
     },
   },
   created() {
-    this.createInstanceBindEvent();
+    this.createInstanceBindEvents();
   },
   destroyed() {
     this.draggableInstance.destroy();

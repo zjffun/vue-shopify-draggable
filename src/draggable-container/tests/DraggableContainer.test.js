@@ -1,5 +1,5 @@
-import VueShopifyDraggable from '../../../lib/vue-shopify-draggable.umd';
-import propsTag from '../../tests/props-tag';
+import VueShopifyDraggable from '../../../lib/index.common';
+import propTag from '../../tests/prop-tag';
 
 Vue.use(VueShopifyDraggable);
 
@@ -66,7 +66,7 @@ describe('DraggableContainer', () => {
 
   describe('props', () => {
     describe('tag', () => {
-      propsTag(env);
+      propTag(env);
     });
   });
 });

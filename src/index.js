@@ -4,7 +4,6 @@ import DraggableContainer from './draggable-container';
 import Droppable from './droppable';
 import Sortable from './sortable';
 import Swappable from './swappable';
-import pluginEvents from './plugin-events';
 
 const components = [Draggable, DraggableContainer, Droppable, Sortable, Swappable];
 
@@ -22,5 +21,4 @@ export default {
   Droppable,
   Sortable,
   Swappable,
-  pluginEvents,
 };

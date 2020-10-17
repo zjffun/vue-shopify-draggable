@@ -4,27 +4,35 @@ Vue component of Shopify draggable.
 
 ## TOC
 
-- [vue-shopify-draggable](#vue-shopify-draggable)
-  - [Installation](#installation)
-  - [Usage](#usage)
-    - [Init componnet](#init-componnet)
-    - [`vue-sortable`](#vue-sortable)
-    - [`vue-swappable`](#vue-swappable)
-    - [`vue-droppable`](#vue-droppable)
-    - [`vue-draggable`](#vue-draggable)
-    - [vue-draggable-container](#vue-draggable-container)
-  - [API](#api)
-    - [properties](#properties)
-      - [options](#options)
-      - [tag](#tag)
-      - [pluginEvents](#pluginevents)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Register components](#register-components)
+  - [`vue-sortable`](#vue-sortable)
+  - [`vue-swappable`](#vue-swappable)
+  - [`vue-droppable`](#vue-droppable)
+  - [`vue-draggable`](#vue-draggable)
+  - [`vue-draggable-container`](#vue-draggable-container)
+- [API](#api)
+  - [properties](#properties)
+    - [options](#options)
+    - [tag](#tag)
+    - [pluginEvents](#pluginevents)
+  - [Events](#events)
 
 ## Installation
 
 npm:
 
 ```bash
-npm install vue-shopify-draggable vue @shopify/draggable
+npm install vue-shopify-draggable 
+# peer dependencies
+npm install vue @shopify/draggable
+```
+
+CDN:
+
+```html
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
 ```
 
 ## Usage
@@ -42,21 +50,21 @@ CDN:
 ```html
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@latest/lib/vue-shopify-draggable.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
 <script>
   Vue.use(VueShopifyDraggable);
 </script>
 ```
 
-### Init componnet
+### Register components
 
-install all:
+Register all components:
 
 ```js
 Vue.use(VueShopifyDraggable);
 ```
 
-install separately:
+Separately register components:
 
 ```js
 Vue.use(VueShopifyDraggable.DraggableContainer);
@@ -67,7 +75,7 @@ Vue.use(VueShopifyDraggable.Draggable);
 
 // or
 
-Vue.component('custom-name', VueShopifyDraggable.Swappable);
+Vue.component('CustomName', VueShopifyDraggable.Swappable);
 ```
 
 ### `vue-sortable`
@@ -97,7 +105,7 @@ Example
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@latest/lib/vue-shopify-draggable.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -154,7 +162,7 @@ Example
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@latest/lib/vue-shopify-draggable.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -214,7 +222,7 @@ Example
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@latest/lib/vue-shopify-draggable.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -267,7 +275,7 @@ Example
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@latest/lib/vue-shopify-draggable.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -302,7 +310,7 @@ Example
 
 #### options
 
-`options` propority can set to `vue-sortable`, `vue-swappable`, `vue-droppable` and `vue-draggable`.
+`options` property can set to `vue-sortable`, `vue-swappable`, `vue-droppable` and `vue-draggable`.
 
 <details>
 <summary>
@@ -320,7 +328,7 @@ Example
 
 #### tag
 
-`options` propority can set to `vue-draggable-container`, `vue-sortable`, `vue-swappable`, `vue-droppable` and `vue-draggable`.
+`tag` property can set to `vue-draggable-container`, `vue-sortable`, `vue-swappable`, `vue-droppable` and `vue-draggable`.
 
 If you not want to generate a wrapper dom, you can set an empty string for the `tag`. Notice: If you set an empty string for the `tag` of a component, this component will only render the first slot node.
 
@@ -352,7 +360,7 @@ Empty string:
 
 Shopify draggable is easy to create plugins, those plugins may emit custom events. You can listen those events by set `pluginEvents`.
 
-We already listened all official plugins' evnents.
+vue-shopify-draggable is already listened all official plugins' events, so only events of third plugins need push in `pluginEvents`.
 
 <details>
 <summary>
@@ -365,7 +373,7 @@ Example
 
 </details>
 
-## Events
+### Events
 
 Draggable:
 

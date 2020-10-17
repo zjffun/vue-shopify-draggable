@@ -1,10 +1,10 @@
 {
   "name": "vue-shopify-draggable",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Vue component of Shopify draggable.",
-  "main": "lib/vue-shopify-draggable.common.js",
-  "unpkg": "lib/vue-shopify-draggable.umd.js",
-  "jsdelivr": "lib/vue-shopify-draggable.umd.js",
+  "main": "lib/index.common.js",
+  "unpkg": "lib/index.js",
+  "jsdelivr": "lib/index.js",
   "files": [
     "src",
     "lib/*.js"
@@ -18,13 +18,13 @@
     "test": "karma start ./scripts/test/karma.dev.conf.js",
     "test-ci": "karma start ./scripts/test/karma.ci.conf.js --single-run",
     "doc:toc": "markdown-toc README.md",
-    "prepublishOnly": "npm run lint && npm run test-ci && rm -rf lib && npm run build"
+    "prepublishOnly": "rm -rf lib && npm run build && npm run lint && npm run test-ci"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zjffun/vue-shopify-draggable.git"
   },
-  "author": "",
+  "author": "JuFeng Zhang",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zjffun/vue-shopify-draggable/issues"

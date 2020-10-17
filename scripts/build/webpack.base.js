@@ -9,7 +9,7 @@ module.exports = {
     library: 'VueShopifyDraggable',
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.json'],
     modules: ['node_modules'],
   },
   externals: {
@@ -26,5 +26,4 @@ module.exports = {
       root: 'Draggable',
     },
   },
-
 };
