@@ -24,7 +24,7 @@ Vue component of Shopify draggable.
 npm:
 
 ```bash
-npm install vue-shopify-draggable
+npm install vue-shopify-draggable vue @shopify/draggable
 ```
 
 ## Usage
@@ -32,13 +32,20 @@ npm install vue-shopify-draggable
 ES6:
 
 ```js
+import Vue from 'vue';
 import VueShopifyDraggable from 'vue-shopify-draggable';
+Vue.use(VueShopifyDraggable);
 ```
 
 CDN:
 
 ```html
+<script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@latest/lib/vue-shopify-draggable.umd.js"></script>
+<script>
+  Vue.use(VueShopifyDraggable);
+</script>
 ```
 
 ### Init componnet
@@ -52,7 +59,11 @@ Vue.use(VueShopifyDraggable);
 install separately:
 
 ```js
+Vue.use(VueShopifyDraggable.DraggableContainer);
 Vue.use(VueShopifyDraggable.Sortable);
+Vue.use(VueShopifyDraggable.Swappable);
+Vue.use(VueShopifyDraggable.Droppable);
+Vue.use(VueShopifyDraggable.Draggable);
 
 // or
 
@@ -86,7 +97,7 @@ Example
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="./lib/vue-shopify-draggable.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@latest/lib/vue-shopify-draggable.umd.js"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -143,7 +154,7 @@ Example
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="./lib/vue-shopify-draggable.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@latest/lib/vue-shopify-draggable.umd.js"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -203,7 +214,7 @@ Example
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="./lib/vue-shopify-draggable.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@latest/lib/vue-shopify-draggable.umd.js"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -256,7 +267,7 @@ Example
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="./lib/vue-shopify-draggable.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@latest/lib/vue-shopify-draggable.umd.js"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -339,7 +350,7 @@ Empty string:
 
 #### pluginEvents
 
-@shopify/draggable is easy to create plugins, those plugins may need emit events. You can listen those events by set `pluginEvents`.
+Shopify draggable is easy to create plugins, those plugins may emit custom events. You can listen those events by set `pluginEvents`.
 
 We already listened all official plugins' evnents.
 
@@ -354,6 +365,49 @@ Example
 
 </details>
 
-## events
+## Events
 
-TODO
+Draggable:
+
+- `draggable:initialize`
+- `draggable:destroy`
+- `drag:start`
+- `drag:move`
+- `drag:over`
+- `drag:over:container`
+- `drag:out`
+- `drag:out:container`
+- `drag:stop`
+- `drag:stopped`
+- `drag:pressure`
+
+Sortable:
+
+- `sortable:start`
+- `sortable:sort`
+- `sortable:sorted`
+- `sortable:stop`
+
+Swappable:
+
+- `swappable:start`
+- `swappable:swap`
+- `swappable:swapped`
+- `swappable:stop'`
+
+Droppable:
+
+- `droppable:dropped`
+- `droppable:returned`
+
+Plugins:
+
+- `mirror:create`
+- `mirror:created`
+- `mirror:attached`
+- `mirror:move`
+- `mirror:destroy`
+- `collidable:in`
+- `collidable:out`
+- `snap:in`
+- `snap:out`

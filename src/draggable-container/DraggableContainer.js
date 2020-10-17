@@ -11,7 +11,7 @@ export default {
     },
   },
   mounted() {
-    if (this.draggable.draggableInstance) {
+    if (this.draggable) {
       this.draggable.draggableInstance.addContainer(this.$el);
     } else {
       // eslint-disable-next-line no-console
@@ -19,7 +19,7 @@ export default {
     }
   },
   beforeDestroy() {
-    if (this.draggable.draggableInstance) {
+    if (this.draggable) {
       this.draggable.draggableInstance.removeContainer(this.$el);
     } else {
       // eslint-disable-next-line no-console

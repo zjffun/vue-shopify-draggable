@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const webpackConfig = require('./webpack.common.js');
+const webpackConfig = require('./webpack.base.js');
 const pkg = require('../../package.json');
 
 module.exports = merge(webpackConfig, {
@@ -20,4 +20,7 @@ module.exports = merge(webpackConfig, {
       PKG_VERSION: JSON.stringify(pkg.version),
     }),
   ],
+  optimization: {
+    minimize: false,
+  },
 });

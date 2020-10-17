@@ -4,7 +4,9 @@ module.exports = (config) => {
   config.set({
     ...conf,
 
-    browsers: ['Chrome', 'ChromeHeadless'],
+    plugins: [...conf.plugins, 'karma-firefox-launcher', 'karma-ie-launcher'],
+
+    browsers: [...conf.browsers, 'Chrome', 'Firefox', 'IE'],
 
     files: [
       { pattern: '../../node_modules/vue/dist/vue.js', watched: false },
