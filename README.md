@@ -207,7 +207,7 @@ Example
 <div id="VueEl"></div>
 
 <script type="text/template" id="VueTemplate">
-  <vue-droppable :options="options" @swappable:swapped="swapped">
+  <vue-droppable :options="options" @droppable:dropped="dropped">
     <vue-draggable-container>
       <div class="dropzone draggable-dropzone--occupied"><div class="item">droppable-item1</div></div>
       <div class="dropzone draggable-dropzone--occupied"><div class="item">droppable-item2</div></div>
@@ -238,7 +238,7 @@ Example
       };
     },
     methods: {
-      swapped: function (e) {
+      dropped: function (e) {
         console.log(e);
       },
     },
@@ -386,7 +386,7 @@ Draggable:
 - `drag:out`
 - `drag:out:container`
 - `drag:stop`
-- `drag:stopped`
+- `drag:stopped` (added in `@shopify/draggable@1.0.0-beta.12`)
 - `drag:pressure`
 
 Sortable:
