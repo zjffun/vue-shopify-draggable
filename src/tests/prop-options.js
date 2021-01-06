@@ -10,7 +10,7 @@ export default (env) => {
     const { options } = vueInstance.$refs.draggable.draggableInstance;
 
     expect(options.distance).toBe(0);
-    expect(options.delay).toBe(100);
+    expect(options.delay).toEqual({});
     expect(options.draggable).toBe('.draggable-source');
   });
 
@@ -31,7 +31,7 @@ export default (env) => {
     // provided
     expect(options.distance).toBe(100);
     // default
-    expect(options.delay).toBe(100);
+    expect(options.delay).toEqual({});
     expect(options.draggable).toBe('.draggable-source');
   });
 

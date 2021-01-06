@@ -1,3 +1,7 @@
+[![jsdelivr][jsdelivr-badge]][jsdelivr-link]
+[![npm version][fury-badge]][fury-link]
+[![test CI][test-badge]][test-link]
+
 # vue-shopify-draggable
 
 Vue component of Shopify draggable.
@@ -419,3 +423,10 @@ Plugins:
 - `collidable:out`
 - `snap:in`
 - `snap:out`
+
+[fury-link]: https://badge.fury.io/js/vue-shopify-draggable
+[fury-badge]: https://badge.fury.io/js/vue-shopify-draggable.svg
+[jsdelivr-link]: https://www.jsdelivr.com/package/npm/vue-shopify-draggable
+[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/vue-shopify-draggable/badge
+[test-badge]: https://github.com/zjffun/vue-shopify-draggable/workflows/test%20CI/badge.svg
+[test-link]: https://github.com/zjffun/vue-shopify-draggable/actions
