@@ -1,7 +1,7 @@
 import { Droppable } from '@shopify/draggable';
 import draggableMixin from '../draggable-mixin';
 
-const events = ['droppable:dropped', 'droppable:returned'];
+const events = ['droppable:start', 'droppable:dropped', 'droppable:returned', 'droppable:stop'];
 
 export default {
   name: 'VueDroppable',

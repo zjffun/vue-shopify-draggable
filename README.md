@@ -28,7 +28,7 @@ Vue component of Shopify draggable.
 npm:
 
 ```bash
-npm install vue-shopify-draggable 
+npm install vue-shopify-draggable
 # peer dependencies
 npm install vue @shopify/draggable
 ```
@@ -211,7 +211,7 @@ Example
 <div id="VueEl"></div>
 
 <script type="text/template" id="VueTemplate">
-  <vue-droppable :options="options" @droppable:dropped="dropped">
+  <vue-droppable :options="options" @droppable:start="start" @droppable:dropped="dropped">
     <vue-draggable-container>
       <div class="dropzone draggable-dropzone--occupied"><div class="item">droppable-item1</div></div>
       <div class="dropzone draggable-dropzone--occupied"><div class="item">droppable-item2</div></div>
@@ -243,6 +243,9 @@ Example
     },
     methods: {
       dropped: function (e) {
+        console.log(e);
+      },
+      start: function (e) {
         console.log(e);
       },
     },

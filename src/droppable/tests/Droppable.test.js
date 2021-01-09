@@ -44,6 +44,48 @@ describe('Droppable', () => {
   });
 
   describe('events', () => {
+    it('droppable:start', async () => {
+      const spy = jasmine.createSpy('droppable:start');
+      vueInstance = new Vue({
+        el,
+        template: `
+          <vue-droppable @droppable:start="func" :options="options" ref="droppable">
+            <vue-draggable-container>
+              <div class="dropzone draggable-dropzone--occupied" ref="dropzone1">
+                <div class="item" ref="item">
+                  draggable-source-1
+                </div>
+              </div>
+            </vue-draggable-container>
+            <vue-draggable-container>
+              <div class="dropzone" ref="dropzone2"></div>
+            </vue-draggable-container>
+          </vue-droppable>
+        `,
+        data() {
+          return {
+            options: {
+              draggable: '.item',
+              dropzone: '.dropzone',
+            },
+          };
+        },
+        methods: {
+          func(e) {
+            expect(e.constructor.name).toBe(Droppable.DroppableStartEvent.name);
+            spy();
+          },
+        },
+      });
+
+      await drag({
+        from: vueInstance.$refs.item,
+        to: vueInstance.$refs.dropzone2,
+      });
+
+      expect(spy).toHaveBeenCalledTimes(1);
+    });
+
     it('droppable:dropped', async () => {
       const spy = jasmine.createSpy('droppable:dropped');
       vueInstance = new Vue({
@@ -126,6 +168,48 @@ describe('Droppable', () => {
       moveMouse(vueInstance.$refs.dropzone2, { pageY: 1, pageX: 0 });
       moveMouse(document.body, { pageY: 1, pageX: 0 });
       releaseMouse(document.body);
+
+      expect(spy).toHaveBeenCalledTimes(1);
+    });
+
+    it('droppable:stop', async () => {
+      const spy = jasmine.createSpy('droppable:stop');
+      vueInstance = new Vue({
+        el,
+        template: `
+          <vue-droppable @droppable:stop="func" :options="options" ref="droppable">
+            <vue-draggable-container>
+              <div class="dropzone draggable-dropzone--occupied" ref="dropzone1">
+                <div class="item" ref="item">
+                  draggable-source-1
+                </div>
+              </div>
+            </vue-draggable-container>
+            <vue-draggable-container>
+              <div class="dropzone" ref="dropzone2"></div>
+            </vue-draggable-container>
+          </vue-droppable>
+        `,
+        data() {
+          return {
+            options: {
+              draggable: '.item',
+              dropzone: '.dropzone',
+            },
+          };
+        },
+        methods: {
+          func(e) {
+            expect(e.constructor.name).toBe(Droppable.DroppableStopEvent.name);
+            spy();
+          },
+        },
+      });
+
+      await drag({
+        from: vueInstance.$refs.item,
+        to: vueInstance.$refs.dropzone2,
+      });
 
       expect(spy).toHaveBeenCalledTimes(1);
     });
