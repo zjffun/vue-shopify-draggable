@@ -1,6 +1,6 @@
 {
   "name": "vue-shopify-draggable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue component of Shopify draggable.",
   "main": "lib/index.common.js",
   "unpkg": "lib/index.js",
