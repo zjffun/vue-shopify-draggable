@@ -412,8 +412,10 @@ Swappable:
 
 Droppable:
 
+- `droppable:start`
 - `droppable:dropped`
 - `droppable:returned`
+- `droppable:stop`
 
 Plugins:
 
