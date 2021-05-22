@@ -4,28 +4,28 @@
 
 # vue-shopify-draggable
 
-English | [简体中文](./README.zh-CN.md)
+[English](./README.md) | 简体中文
 
-Vue component of Shopify draggable.
+Shopify draggable 的 Vue 组件。
 
-## TOC
+## 目录
 
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Register components](#register-components)
+- [安装](#installation)
+- [使用](#usage)
+  - [注册组件](#register-components)
   - [`vue-sortable`](#vue-sortable)
   - [`vue-swappable`](#vue-swappable)
   - [`vue-droppable`](#vue-droppable)
   - [`vue-draggable`](#vue-draggable)
   - [`vue-draggable-container`](#vue-draggable-container)
 - [API](#api)
-  - [properties](#properties)
+  - [Props](#properties)
     - [options](#options)
     - [tag](#tag)
     - [pluginEvents](#pluginevents)
-  - [Events](#events)
+  - [事件](#events)
 
-## Installation
+## 安装
 
 npm:
 
@@ -41,7 +41,7 @@ CDN:
 <script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
 ```
 
-## Usage
+## 使用
 
 ES6:
 
@@ -62,15 +62,15 @@ CDN:
 </script>
 ```
 
-### Register components
+### 注册组件
 
-Register all components:
+注册全部组件:
 
 ```js
 Vue.use(VueShopifyDraggable);
 ```
 
-Separately register components:
+注册单个组件:
 
 ```js
 Vue.use(VueShopifyDraggable.DraggableContainer);
@@ -86,11 +86,11 @@ Vue.component('CustomName', VueShopifyDraggable.Swappable);
 
 ### `vue-sortable`
 
-`vue-sortable` support set options and listen events of [Sortable](https://github.com/Shopify/draggable/tree/master/src/Sortable).
+`vue-sortable` 支持为 [Sortable](https://github.com/Shopify/draggable/tree/master/src/Sortable) 设置选项和监听事件。
 
 <details>
 <summary>
-Example
+示例代码
 </summary>
 
 ```html
@@ -143,11 +143,11 @@ Example
 
 ### `vue-swappable`
 
-`vue-swappable` support set options and listen events of [Swappable](https://github.com/Shopify/draggable/tree/master/src/Swappable).
+`vue-swappable` 支持为 [Swappable](https://github.com/Shopify/draggable/tree/master/src/Swappable) 设置选项和监听事件。
 
 <details>
 <summary>
-Example
+示例代码
 </summary>
 
 ```html
@@ -195,11 +195,11 @@ Example
 
 ### `vue-droppable`
 
-`vue-droppable` support set options and listen events of [Droppable](https://github.com/Shopify/draggable/tree/master/src/Droppable).
+`vue-droppable` 支持为 [Droppable](https://github.com/Shopify/draggable/tree/master/src/Droppable) 设置选项和监听事件。
 
 <details>
 <summary>
-Example
+示例代码
 </summary>
 
 ```html
@@ -259,11 +259,11 @@ Example
 
 ### `vue-draggable`
 
-`vue-draggable` support set options and listen events of [Draggable](https://github.com/Shopify/draggable/tree/master/src/Draggable).
+`vue-draggable` 支持为 [Draggable](https://github.com/Shopify/draggable/tree/master/src/Draggable) 设置选项和监听事件。
 
 <details>
 <summary>
-Example
+示例代码
 </summary>
 
 ```html
@@ -311,7 +311,7 @@ Example
 
 ### `vue-draggable-container`
 
-`vue-draggable-container` is always use as children of `vue-sortable`, `vue-swappable`, `vue-droppable` and `vue-draggable`.
+`vue-draggable-container` 总是作为 `vue-sortable`、 `vue-swappable`、 `vue-droppable` 和 `vue-draggable` 的子元素使用。
 
 ## API
 
@@ -319,11 +319,11 @@ Example
 
 #### options
 
-`options` property can set to `vue-sortable`, `vue-swappable`, `vue-droppable` and `vue-draggable`.
+`options` 参数可以设置到 `vue-sortable`, `vue-swappable`, `vue-droppable` 和 `vue-draggable` 上。
 
 <details>
 <summary>
-Example
+示例代码
 </summary>
 
 ```vue
@@ -337,13 +337,13 @@ Example
 
 #### tag
 
-`tag` property can set to `vue-draggable-container`, `vue-sortable`, `vue-swappable`, `vue-droppable` and `vue-draggable`.
+`tag` 参数可以设置到 `vue-draggable-container`, `vue-sortable`, `vue-swappable`, `vue-droppable` 和 `vue-draggable` 上。
 
-If you not want to generate a wrapper dom, you can set an empty string for the `tag`. Notice: If you set an empty string for the `tag` of a component, this component will only render the first slot node.
+如果您不想生成包裹的 DOM 元素，请将 `tag` 设置为空字符串. 注意: 将组件的 `tag` 设置为空字符串是只会渲染组件内的第一个元素。
 
 <details>
 <summary>
-Example
+示例代码
 </summary>
 
 ```vue
@@ -367,13 +367,13 @@ Empty string:
 
 #### pluginEvents
 
-Shopify draggable is easy to create plugins, those plugins may emit custom events. You can listen those events by set `pluginEvents`.
+Shopify draggable 创建插件很容易，这些插件可能有自定义事件。您可以在 `pluginEvents` 中设置监听它们。
 
-vue-shopify-draggable is already listened all official plugins' events, so only events of third plugins need push in `pluginEvents`.
+vue-shopify-draggable 已经监听了全部官方插件的事件，所以只有第三方的插件的事件需要设置在 `pluginEvents` 中。
 
 <details>
 <summary>
-Example
+示例代码
 </summary>
 
 ```vue
@@ -395,7 +395,7 @@ Draggable:
 - `drag:out`
 - `drag:out:container`
 - `drag:stop`
-- `drag:stopped` (added in `@shopify/draggable@1.0.0-beta.12`)
+- `drag:stopped` (添加于 `@shopify/draggable@1.0.0-beta.12`)
 - `drag:pressure`
 
 Sortable:
