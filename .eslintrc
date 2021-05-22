@@ -12,9 +12,10 @@
   },
   "overrides": [
     {
-      "files": ["scripts/build/*.js"],
+      "files": ["scripts/build/*.js", "scripts/test/*.js"],
       "rules": {
-        "import/no-extraneous-dependencies": 0
+        "import/no-extraneous-dependencies": 0,
+        "import/extensions": 0
       }
     },
     {
