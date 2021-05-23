@@ -10,20 +10,20 @@ Shopify draggable 的 Vue 组件。
 
 ## 目录
 
-- [安装](#installation)
-- [使用](#usage)
-  - [注册组件](#register-components)
+- [安装](#安装)
+- [使用](#使用)
+  - [注册组件](#注册组件)
   - [`vue-sortable`](#vue-sortable)
   - [`vue-swappable`](#vue-swappable)
   - [`vue-droppable`](#vue-droppable)
   - [`vue-draggable`](#vue-draggable)
   - [`vue-draggable-container`](#vue-draggable-container)
 - [API](#api)
-  - [Props](#properties)
+  - [Props](#props)
     - [options](#options)
     - [tag](#tag)
     - [pluginEvents](#pluginevents)
-  - [事件](#events)
+  - [事件](#事件)
 
 ## 安装
 
@@ -315,7 +315,7 @@ Vue.component('CustomName', VueShopifyDraggable.Swappable);
 
 ## API
 
-### properties
+### Props
 
 #### options
 
@@ -382,7 +382,7 @@ vue-shopify-draggable 已经监听了全部官方插件的事件，所以只有�
 
 </details>
 
-### Events
+### 事件
 
 Draggable:
 

@@ -19,7 +19,7 @@ Vue component of Shopify draggable.
   - [`vue-draggable`](#vue-draggable)
   - [`vue-draggable-container`](#vue-draggable-container)
 - [API](#api)
-  - [properties](#properties)
+  - [Props](#props)
     - [options](#options)
     - [tag](#tag)
     - [pluginEvents](#pluginevents)
@@ -315,7 +315,7 @@ Example
 
 ## API
 
-### properties
+### Props
 
 #### options
 
