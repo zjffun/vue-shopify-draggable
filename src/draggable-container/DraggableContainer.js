@@ -1,3 +1,5 @@
+import { render } from '../draggable-mixin';
+
 const errorMsg =
   "Can't get the injected object `draggable`, DraggableContainer only be used in Draggable, Droppable, Sortable or Swappable";
 
@@ -26,10 +28,11 @@ export default {
       console.error(errorMsg);
     }
   },
-  render(createElement) {
-    if (this.tag === '') {
-      return this.$slots.default[0];
-    }
-    return createElement(this.tag, this.$slots.default);
+  render(h) {
+    return render({
+      h,
+      slots: this.$slots.default,
+      tag: this.tag,
+    });
   },
 };

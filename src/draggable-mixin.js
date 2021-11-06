@@ -1,3 +1,5 @@
+import { h as vue3h } from 'vue';
+
 const events = [
   // draggable events
   'draggable:initialize',
@@ -84,4 +86,25 @@ export default {
     this.draggableInstance.destroy();
     this.draggableInstance = null;
   },
+};
+
+export const render = ({ h, slots, tag }) => {
+  let vue23H;
+  let vue23Slots;
+
+  vue23H = h;
+  if (typeof h !== 'function') {
+    vue23H = vue3h;
+  }
+
+  vue23Slots = slots;
+  if (!Array.isArray(vue23Slots)) {
+    vue23Slots = vue23Slots();
+  }
+
+  if (tag === '') {
+    return vue23Slots[0];
+  }
+
+  return vue23H(tag, vue23Slots);
 };

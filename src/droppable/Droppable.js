@@ -1,5 +1,5 @@
 import { Droppable } from '@shopify/draggable';
-import draggableMixin from '../draggable-mixin';
+import draggableMixin, { render } from '../draggable-mixin';
 
 const events = ['droppable:start', 'droppable:dropped', 'droppable:returned', 'droppable:stop'];
 
@@ -27,10 +27,11 @@ export default {
       });
     },
   },
-  render(createElement) {
-    if (this.tag === '') {
-      return this.$slots.default[0];
-    }
-    return createElement(this.tag, this.$slots.default);
+  render(h) {
+    return render({
+      h,
+      slots: this.$slots.default,
+      tag: this.tag,
+    });
   },
 };

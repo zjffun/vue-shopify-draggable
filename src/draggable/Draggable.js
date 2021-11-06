@@ -1,5 +1,5 @@
 import { Draggable } from '@shopify/draggable';
-import draggableMixin from '../draggable-mixin';
+import draggableMixin, { render } from '../draggable-mixin';
 
 export default {
   name: 'VueDraggable',
@@ -17,10 +17,11 @@ export default {
       this.draggableInstance = new Draggable(this.containers, this.options);
     },
   },
-  render(createElement) {
-    if (this.tag === '') {
-      return this.$slots.default[0];
-    }
-    return createElement(this.tag, this.$slots.default);
+  render(h) {
+    return render({
+      h,
+      slots: this.$slots.default,
+      tag: this.tag,
+    });
   },
 };

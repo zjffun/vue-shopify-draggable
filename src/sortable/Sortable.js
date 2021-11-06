@@ -1,12 +1,7 @@
 import { Sortable } from '@shopify/draggable';
-import draggableMixin from '../draggable-mixin';
+import draggableMixin, { render } from '../draggable-mixin';
 
-const events = [
-  'sortable:start',
-  'sortable:sort',
-  'sortable:sorted',
-  'sortable:stop',
-];
+const events = ['sortable:start', 'sortable:sort', 'sortable:sorted', 'sortable:stop'];
 
 export default {
   name: 'VueSortable',
@@ -27,10 +22,11 @@ export default {
       });
     },
   },
-  render(createElement) {
-    if (this.tag === '') {
-      return this.$slots.default[0];
-    }
-    return createElement(this.tag, this.$slots.default);
+  render(h) {
+    return render({
+      h,
+      slots: this.$slots.default,
+      tag: this.tag,
+    });
   },
 };
