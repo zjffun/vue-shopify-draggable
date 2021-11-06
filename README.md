@@ -10,20 +10,22 @@ Vue component of Shopify draggable.
 
 ## TOC
 
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Register components](#register-components)
-  - [`vue-sortable`](#vue-sortable)
-  - [`vue-swappable`](#vue-swappable)
-  - [`vue-droppable`](#vue-droppable)
-  - [`vue-draggable`](#vue-draggable)
-  - [`vue-draggable-container`](#vue-draggable-container)
-- [API](#api)
-  - [Props](#props)
-    - [options](#options)
-    - [tag](#tag)
-    - [pluginEvents](#pluginevents)
-  - [Events](#events)
+- [vue-shopify-draggable](#vue-shopify-draggable)
+  - [TOC](#toc)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Register components](#register-components)
+    - [`vue-sortable`](#vue-sortable)
+    - [`vue-swappable`](#vue-swappable)
+    - [`vue-droppable`](#vue-droppable)
+    - [`vue-draggable`](#vue-draggable)
+    - [`vue-draggable-container`](#vue-draggable-container)
+  - [API](#api)
+    - [Props](#props)
+      - [options](#options)
+      - [tag](#tag)
+      - [pluginEvents](#pluginevents)
+    - [Events](#events)
 
 ## Installation
 
@@ -59,6 +61,55 @@ CDN:
 <script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
 <script>
   Vue.use(VueShopifyDraggable);
+</script>
+```
+
+Vue3:
+
+```html
+<div id="vue-shopify-draggable-app">
+  <vue-sortable :options="options" @sortable:sorted="sorted">
+    <vue-draggable-container tag="ul">
+      <li class="item">sortable-item1</li>
+      <li class="item">sortable-item2</li>
+    </vue-draggable-container>
+    <hr />
+    <vue-draggable-container tag="ul">
+      <li class="item">sortable-item3</li>
+    </vue-draggable-container>
+  </vue-sortable>
+</div>
+
+<script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue@3.2.21/dist/vue.global.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+
+<script>
+  const VueShopifyDraggableApp = {
+    methods: {
+      sorted: function (e) {
+        console.log(e);
+      },
+    },
+    data() {
+      return {
+        options: {
+          draggable: '.item',
+          sortAnimation: {
+            duration: 200,
+            easingFunction: 'ease-in-out',
+          },
+          plugins: [Draggable.Plugins.SortAnimation],
+        },
+      };
+    },
+  };
+
+  const app = Vue.createApp(VueShopifyDraggableApp);
+
+  app.use(VueShopifyDraggable);
+
+  app.mount('#vue-shopify-draggable-app');
 </script>
 ```
 
