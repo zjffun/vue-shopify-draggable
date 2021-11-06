@@ -64,7 +64,10 @@ CDN:
 </script>
 ```
 
-Vue3:
+<details>
+<summary>
+Vue3
+</summary>
 
 ```html
 <div id="vue-shopify-draggable-app">
@@ -112,6 +115,8 @@ Vue3:
   app.mount('#vue-shopify-draggable-app');
 </script>
 ```
+
+</details>
 
 ### Register components
 
