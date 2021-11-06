@@ -98,7 +98,7 @@ export const render = ({ h, slots, tag }) => {
   }
 
   vue23Slots = slots;
-  if (!Array.isArray(vue23Slots)) {
+  if (vue23Slots && !Array.isArray(vue23Slots)) {
     vue23Slots = vue23Slots();
   }
 
