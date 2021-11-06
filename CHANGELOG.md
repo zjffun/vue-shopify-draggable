@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.0.3
+
+### Feature
+
+- Support Vue3
+
 ## v0.0.2
 
 ### Fix
