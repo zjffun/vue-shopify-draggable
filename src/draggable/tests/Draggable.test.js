@@ -181,6 +181,7 @@ describe('Draggable', () => {
       expect(spy).toHaveBeenCalled();
     });
 
+    // not sure why fail in Chrome and Firefox
     it('drag:out', async () => {
       const spy = jasmine.createSpy('drag:out');
       vueInstance = new Vue({
@@ -209,6 +210,7 @@ describe('Draggable', () => {
       expect(spy).toHaveBeenCalled();
     });
 
+    // not sure why fail in Chrome and Firefox
     it('drag:out:container', async () => {
       const spy = jasmine.createSpy('drag:out:container');
       vueInstance = new Vue({

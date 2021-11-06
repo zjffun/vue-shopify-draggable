@@ -6,7 +6,12 @@ module.exports = (config) => {
 
     plugins: [...conf.plugins, 'karma-firefox-launcher', 'karma-ie-launcher'],
 
-    browsers: [...conf.browsers, 'Chrome', 'Firefox', 'IE'],
+    browsers: [
+      ...conf.browsers,
+      'Chrome',
+      'Firefox',
+      // 'IE'
+    ],
 
     files: [
       { pattern: '../../node_modules/vue/dist/vue.js', watched: false },
