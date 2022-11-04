@@ -18,8 +18,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node_version }}
-      - name: npm install, build and test
+      - name: Install, build and test
         run: |
-          npm install
-          npm run prepublishOnly
+          yarn install
+          yarn run prepublishOnly
           yarn codecov
