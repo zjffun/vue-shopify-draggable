@@ -1,6 +1,6 @@
 [![jsdelivr][jsdelivr-badge]][jsdelivr-link]
 [![npm version][fury-badge]][fury-link]
-[![test CI][test-badge]][test-link]
+[![codecov][codecov-badge]][codecov-link]
 
 # vue-shopify-draggable
 
@@ -40,7 +40,7 @@ npm install vue @shopify/draggable
 CDN:
 
 ```html
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 ```
 
 ## Usage
@@ -58,7 +58,7 @@ CDN:
 ```html
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 <script>
   Vue.use(VueShopifyDraggable);
 </script>
@@ -85,7 +85,7 @@ Vue3
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@3.2.21/dist/vue.global.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 
 <script>
   const VueShopifyDraggableApp = {
@@ -167,7 +167,7 @@ Example
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -224,7 +224,7 @@ Example
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -284,7 +284,7 @@ Example
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -340,7 +340,7 @@ Example
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -491,5 +491,5 @@ Plugins:
 [fury-badge]: https://badge.fury.io/js/vue-shopify-draggable.svg
 [jsdelivr-link]: https://www.jsdelivr.com/package/npm/vue-shopify-draggable
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/vue-shopify-draggable/badge
-[test-badge]: https://github.com/zjffun/vue-shopify-draggable/workflows/test%20CI/badge.svg
-[test-link]: https://github.com/zjffun/vue-shopify-draggable/actions
+[codecov-badge]: https://codecov.io/gh/zjffun/vue-shopify-draggable/branch/main/graph/badge.svg
+[codecov-link]: https://codecov.io/gh/zjffun/vue-shopify-draggable

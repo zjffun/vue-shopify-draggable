@@ -1,6 +1,4 @@
 module.exports = {
-  plugins: ['karma-webpack', 'karma-jasmine', 'karma-chrome-launcher'],
-
   browsers: ['ChromeHeadless'],
 
   basePath: '',

@@ -4,8 +4,6 @@ module.exports = (config) => {
   config.set({
     ...conf,
 
-    plugins: [...conf.plugins, 'karma-firefox-launcher', 'karma-ie-launcher'],
-
     browsers: [
       ...conf.browsers,
       'Chrome',

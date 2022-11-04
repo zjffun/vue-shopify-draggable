@@ -38,7 +38,7 @@ npm install vue @shopify/draggable
 CDN:
 
 ```html
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 ```
 
 ## 使用
@@ -56,7 +56,7 @@ CDN:
 ```html
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 <script>
   Vue.use(VueShopifyDraggable);
 </script>
@@ -111,7 +111,7 @@ Vue.component('CustomName', VueShopifyDraggable.Swappable);
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -168,7 +168,7 @@ Vue.component('CustomName', VueShopifyDraggable.Swappable);
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -228,7 +228,7 @@ Vue.component('CustomName', VueShopifyDraggable.Swappable);
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
@@ -284,7 +284,7 @@ Vue.component('CustomName', VueShopifyDraggable.Swappable);
 
 <script src="//cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable/lib/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-shopify-draggable@0.0.3"></script>
 
 <script>
   Vue.use(VueShopifyDraggable);
